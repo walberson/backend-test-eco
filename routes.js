@@ -6,5 +6,7 @@ const authenticationController = new AuthenticationController();
 const routes = Router();
 
 routes.post("/", authenticationController.handle);
-
+routes.get("/", (req, res) => {
+  res.send("Hello World");
+});
 export { routes };
